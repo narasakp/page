@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Convert SVG to PNG - Final</title>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="630" style="border: 1px solid #ccc;"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Background gradient - purple to blue
+        const bgGradient = ctx.createLinearGradient(0, 0, 1200, 630);
+        bgGradient.addColorStop(0, '#667eea');
+        bgGradient.addColorStop(1, '#764ba2');
+        ctx.fillStyle = bgGradient;
+        ctx.fillRect(0, 0, 1200, 630);
+        
+        // Floating shapes
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.07)';
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+        ctx.beginPath();
+        ctx.arc(1100, 150, 40, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+        ctx.beginPath();
+        ctx.arc(150, 500, 35, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Main card
+        const cardGradient = ctx.createLinearGradient(100, 100, 1100, 530);
+        cardGradient.addColorStop(0, 'rgba(255, 255, 255, 0.95)');
+        cardGradient.addColorStop(1, 'rgba(248, 250, 252, 0.9)');
+        ctx.fillStyle = cardGradient;
+        ctx.roundRect(100, 100, 1000, 430, 20);
+        ctx.fill();
+        
+        // Robot/AI Icon
+        ctx.fillStyle = '#4299e1';
+        ctx.roundRect(150, 150, 80, 80, 10);
+        ctx.fill();
+        
+        // Robot eyes
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(175, 175, 8, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(205, 175, 8, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Robot mouth
+        ctx.fillStyle = '#ffffff';
+        ctx.roundRect(170, 200, 40, 8, 4);
+        ctx.fill();
+        
+        // Robot body
+        ctx.fillStyle = '#667eea';
+        ctx.roundRect(160, 240, 60, 40, 5);
+        ctx.fill();
+        
+        // Robot arms
+        ctx.fillStyle = '#764ba2';
+        ctx.roundRect(150, 260, 20, 30, 3);
+        ctx.fill();
+        ctx.roundRect(210, 260, 20, 30, 3);
+        ctx.fill();
+        
+        // Code brackets
+        ctx.fillStyle = 'rgba(66, 153, 225, 0.3)';
+        ctx.font = 'bold 120px monospace';
+        ctx.fillText('</>', 900, 300);
+        
+        // Title
+        ctx.fillStyle = '#2d3748';
+        ctx.font = 'bold 48px Arial, sans-serif';
+        ctx.fillText('การสอนเขียนโค้ดในยุค AI', 300, 200);
+        
+        // Subtitle
+        ctx.fillStyle = '#4a5568';
+        ctx.font = '500 32px Arial, sans-serif';
+        ctx.fillText('คู่มือสำหรับอาจารย์', 300, 250);
+        
+        // Key points
+        ctx.fillStyle = '#2d3748';
+        ctx.font = '24px Arial, sans-serif';
+        ctx.fillText('🎯 เปลี่ยนจาก "เขียนโค้ด" สู่ "แก้ปัญหาด้วยเทคโนโลยี"', 300, 300);
+        ctx.fillText('🤖 ใช้ AI เป็นเครื่องมือช่วยสอน', 300, 340);
+        ctx.fillText('📚 หลักสูตร 4 ปี พร้อมเครื่องมือและวิธีการ', 300, 380);
+        
+        // Bottom accent
+        ctx.fillStyle = 'rgba(102, 126, 234, 0.2)';
+        ctx.fillRect(0, 580, 1200, 50);
+        
+        // Author
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '18px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('จัดทำโดย: อาจารย์ผู้สอนคอมพิวเตอร์ | สิงหาคม 2568', 600, 610);
+        
+        // Convert to PNG and download
+        setTimeout(() => {
+            const link = document.createElement('a');
+            link.download = 'ai-coding-guide-featured.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,105 +1,64 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Bright Fresh Minimal Background -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#f8fafc;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
     </linearGradient>
-    <!-- Clean White Card -->
     <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.98" />
-      <stop offset="100%" style="stop-color:#fefefe;stop-opacity:0.95" />
-    </linearGradient>
-    <!-- Fresh Blue to Green Accent -->
-    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:0.9" />
     </linearGradient>
   </defs>
   
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bgGradient)"/>
   
-  <!-- Floating shapes - minimal and fresh -->
-  <circle cx="120" cy="120" r="45" fill="rgba(14, 165, 233, 0.08)" opacity="0.6"/>
-  <circle cx="1080" cy="180" r="35" fill="rgba(16, 185, 129, 0.08)" opacity="0.5"/>
-  <circle cx="180" cy="480" r="30" fill="rgba(14, 165, 233, 0.06)" opacity="0.4"/>
-  <circle cx="1000" cy="450" r="25" fill="rgba(16, 185, 129, 0.06)" opacity="0.3"/>
+  <!-- Floating shapes -->
+  <circle cx="100" cy="100" r="50" fill="rgba(255,255,255,0.1)" opacity="0.7"/>
+  <circle cx="1100" cy="150" r="40" fill="rgba(255,255,255,0.1)" opacity="0.5"/>
+  <circle cx="150" cy="500" r="35" fill="rgba(255,255,255,0.1)" opacity="0.6"/>
   
-  <!-- Main card with soft shadow -->
-  <rect x="80" y="80" width="1040" height="470" rx="25" fill="url(#cardGradient)" opacity="0.98"/>
-  <rect x="85" y="85" width="1030" height="460" rx="20" fill="none" stroke="rgba(243, 244, 246, 0.8)" stroke-width="1"/>
+  <!-- Main card -->
+  <rect x="100" y="100" width="1000" height="430" rx="20" fill="url(#cardGradient)" opacity="0.95"/>
   
-  <!-- Modern Robot/AI Icon -->
-  <g transform="translate(120, 140)">
-    <!-- Robot head -->
-    <rect x="0" y="0" width="90" height="90" rx="15" fill="url(#accentGradient)"/>
-    <!-- Eyes -->
-    <circle cx="25" cy="30" r="10" fill="#ffffff"/>
-    <circle cx="65" cy="30" r="10" fill="#ffffff"/>
-    <circle cx="25" cy="30" r="6" fill="#0ea5e9"/>
-    <circle cx="65" cy="30" r="6" fill="#10b981"/>
-    <!-- Smile -->
-    <path d="M 30 60 Q 45 75 60 60" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <!-- Body -->
-    <rect x="10" y="100" width="70" height="50" rx="8" fill="rgba(14, 165, 233, 0.6)"/>
-    <!-- Arms -->
-    <rect x="-5" y="120" width="25" height="35" rx="5" fill="rgba(16, 185, 129, 0.6)"/>
-    <rect x="70" y="120" width="25" height="35" rx="5" fill="rgba(16, 185, 129, 0.6)"/>
-    <!-- Decorative elements -->
-    <circle cx="45" cy="125" r="8" fill="#ffffff" opacity="0.7"/>
-    <rect x="35" y="135" width="20" height="3" rx="1" fill="#ffffff" opacity="0.6"/>
+  <!-- Robot/AI Icon -->
+  <g transform="translate(150, 150)">
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="#4299e1"/>
+    <circle cx="25" cy="25" r="8" fill="#ffffff"/>
+    <circle cx="55" cy="25" r="8" fill="#ffffff"/>
+    <rect x="20" y="50" width="40" height="8" rx="4" fill="#ffffff"/>
+    <rect x="10" y="90" width="60" height="40" rx="5" fill="#667eea"/>
+    <rect x="0" y="110" width="20" height="30" rx="3" fill="#764ba2"/>
+    <rect x="60" y="110" width="20" height="30" rx="3" fill="#764ba2"/>
   </g>
   
-  <!-- Code brackets - softer and more friendly -->
-  <g transform="translate(880, 160)" fill="url(#accentGradient)" opacity="0.25">
-    <text x="0" y="0" font-family="monospace" font-size="140" font-weight="300">&lt;/&gt;</text>
+  <!-- Code brackets -->
+  <g transform="translate(900, 180)" fill="#4299e1" opacity="0.3">
+    <text x="0" y="0" font-family="monospace" font-size="120" font-weight="bold">&lt;/&gt;</text>
   </g>
   
-  <!-- Decorative code elements -->
-  <g transform="translate(850, 300)" fill="rgba(14, 165, 233, 0.12)" font-family="monospace" font-size="16">
-    <text x="0" y="0">function teach() {</text>
-    <text x="20" y="25">  return "AI + idea";</text>
-    <text x="0" y="50">}</text>
-  </g>
-  
-  <!-- Title with solid color for better compatibility -->
-  <text x="280" y="200" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#0ea5e9">
+  <!-- Title -->
+  <text x="300" y="200" font-family="Sarabun, sans-serif" font-size="48" font-weight="bold" fill="#2d3748">
     การสอนเขียนโค้ดในยุค AI
   </text>
   
   <!-- Subtitle -->
-  <text x="280" y="250" font-family="Arial, sans-serif" font-size="36" font-weight="500" fill="#374151">
+  <text x="300" y="250" font-family="Sarabun, sans-serif" font-size="32" font-weight="500" fill="#4a5568">
     คู่มือสำหรับอาจารย์
   </text>
   
-  <!-- Key points with simple circles -->
-  <g transform="translate(280, 300)" font-family="Arial, sans-serif" font-size="26" fill="#374151">
-    <g transform="translate(0, 0)">
-      <circle cx="15" cy="-8" r="12" fill="#0ea5e9" opacity="0.2"/>
-      <text x="40" y="0">เปลี่ยนจาก "เขียนโค้ด" สู่ "แก้ปัญหาด้วยเทคโนโลยี"</text>
-    </g>
-    <g transform="translate(0, 45)">
-      <circle cx="15" cy="-8" r="12" fill="#10b981" opacity="0.2"/>
-      <text x="40" y="0">ใช้ AI เป็นเครื่องมือช่วยสอน</text>
-    </g>
-    <g transform="translate(0, 90)">
-      <circle cx="15" cy="-8" r="12" fill="#0ea5e9" opacity="0.15"/>
-      <text x="40" y="0">หลักสูตร 4 ปี พร้อมเครื่องมือและวิธีการ</text>
-    </g>
+  <!-- Key points -->
+  <g transform="translate(300, 300)" font-family="Sarabun, sans-serif" font-size="24" fill="#2d3748">
+    <text x="0" y="0">🎯 เปลี่ยนจาก "เขียนโค้ด" สู่ "แก้ปัญหาด้วยเทคโนโลยี"</text>
+    <text x="0" y="40">🤖 ใช้ AI เป็นเครื่องมือช่วยสอน</text>
+    <text x="0" y="80">📚 หลักสูตร 4 ปี พร้อมเครื่องมือและวิธีการ</text>
   </g>
   
-  <!-- Bottom accent with warm gradient -->
-  <rect x="0" y="570" width="1200" height="60" fill="url(#accentGradient)" opacity="0.1"/>
+  <!-- Bottom accent -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(102, 126, 234, 0.2)"/>
   
-  <!-- Author with better styling -->
-  <text x="600" y="605" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#374151" font-weight="500">
+  <!-- Author -->
+  <text x="600" y="610" font-family="Sarabun, sans-serif" font-size="18" text-anchor="middle" fill="#ffffff">
     จัดทำโดย: อาจารย์ผู้สอนคอมพิวเตอร์ | สิงหาคม 2568
   </text>
-  
-  <!-- Decorative elements -->
-  <circle cx="50" cy="50" r="3" fill="rgba(14, 165, 233, 0.15)"/>
-  <circle cx="1150" cy="580" r="4" fill="rgba(16, 185, 129, 0.15)"/>
-  <circle cx="70" cy="580" r="2" fill="rgba(14, 165, 233, 0.1)"/>
 </svg>
