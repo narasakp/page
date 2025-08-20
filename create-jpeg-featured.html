@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create JPEG Featured Image</title>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="630" style="border: 1px solid #ccc;"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Background gradient - white to light gray
+        const bgGradient = ctx.createLinearGradient(0, 0, 1200, 630);
+        bgGradient.addColorStop(0, '#ffffff');
+        bgGradient.addColorStop(0.5, '#f8fafc');
+        bgGradient.addColorStop(1, '#f1f5f9');
+        ctx.fillStyle = bgGradient;
+        ctx.fillRect(0, 0, 1200, 630);
+        
+        // Main card background
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+        ctx.fillRect(80, 80, 1040, 470);
+        
+        // Card border
+        ctx.strokeStyle = 'rgba(243, 244, 246, 0.8)';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(80, 80, 1040, 470);
+        
+        // Robot icon - simple geometric shapes
+        // Robot head
+        ctx.fillStyle = '#0ea5e9';
+        ctx.fillRect(120, 140, 90, 90);
+        
+        // Robot eyes
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(145, 170, 10, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(185, 170, 10, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Eye pupils
+        ctx.fillStyle = '#0ea5e9';
+        ctx.beginPath();
+        ctx.arc(145, 170, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = '#10b981';
+        ctx.beginPath();
+        ctx.arc(185, 170, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Robot smile
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.arc(165, 195, 15, 0, Math.PI);
+        ctx.stroke();
+        
+        // Robot body
+        ctx.fillStyle = 'rgba(14, 165, 233, 0.7)';
+        ctx.fillRect(130, 240, 70, 50);
+        
+        // Robot arms
+        ctx.fillStyle = 'rgba(16, 185, 129, 0.7)';
+        ctx.fillRect(115, 260, 25, 35);
+        ctx.fillRect(190, 260, 25, 35);
+        
+        // Decorative circles
+        ctx.fillStyle = 'rgba(14, 165, 233, 0.1)';
+        ctx.beginPath();
+        ctx.arc(120, 120, 45, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = 'rgba(16, 185, 129, 0.08)';
+        ctx.beginPath();
+        ctx.arc(1080, 180, 35, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Title - large and bold
+        ctx.fillStyle = '#0ea5e9';
+        ctx.font = 'bold 48px Arial, sans-serif';
+        ctx.fillText('การสอนเขียนโค้ดในยุค AI', 280, 200);
+        
+        // Subtitle
+        ctx.fillStyle = '#374151';
+        ctx.font = '600 32px Arial, sans-serif';
+        ctx.fillText('คู่มือสำหรับอาจารย์', 280, 250);
+        
+        // Key points with simple bullets
+        ctx.font = '24px Arial, sans-serif';
+        
+        // Point 1
+        ctx.fillStyle = '#0ea5e9';
+        ctx.beginPath();
+        ctx.arc(295, 292, 8, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = '#374151';
+        ctx.fillText('เปลี่ยนจาก "เขียนโค้ด" สู่ "แก้ปัญหาด้วยเทคโนโลยี"', 320, 300);
+        
+        // Point 2
+        ctx.fillStyle = '#10b981';
+        ctx.beginPath();
+        ctx.arc(295, 337, 8, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = '#374151';
+        ctx.fillText('ใช้ AI เป็นเครื่องมือช่วยสอน', 320, 345);
+        
+        // Point 3
+        ctx.fillStyle = '#0ea5e9';
+        ctx.beginPath();
+        ctx.arc(295, 382, 8, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = '#374151';
+        ctx.fillText('หลักสูตร 4 ปี พร้อมเครื่องมือและวิธีการ', 320, 390);
+        
+        // Code symbols - simple text
+        ctx.fillStyle = 'rgba(14, 165, 233, 0.3)';
+        ctx.font = 'bold 120px monospace';
+        ctx.fillText('</>', 880, 280);
+        
+        // Bottom accent bar
+        ctx.fillStyle = 'rgba(14, 165, 233, 0.15)';
+        ctx.fillRect(0, 570, 1200, 60);
+        
+        // Author
+        ctx.fillStyle = '#374151';
+        ctx.font = '500 18px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('จัดทำโดย: อาจารย์ผู้สอนคอมพิวเตอร์ | สิงหาคม 2568', 600, 605);
+        
+        // Convert to JPEG and download
+        setTimeout(() => {
+            const link = document.createElement('a');
+            link.download = 'ai-coding-guide-featured.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.95);
+            link.click();
+        }, 1000);
+    </script>
+</body>
+</html>
