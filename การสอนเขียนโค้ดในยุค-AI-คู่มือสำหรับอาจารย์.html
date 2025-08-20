@@ -31,14 +31,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Warm & Bright 60-30-10 Color Scheme */
-            --primary-color: #14b8a6;        /* 30% - Soft teal (น่าเรียนรู้) */
-            --accent-color: #f472b6;         /* 10% - Coral pink (สดใส น่าคบหา) */
-            --neutral-color: #fef7ed;        /* 60% - Warm cream (อบอุ่น สว่าง) */
-            --text-color: #374151;           /* Warm dark gray */
-            --text-light: #6b7280;           /* Soft gray */
-            --border-color: #fde68a;         /* Warm yellow border */
-            --card-shadow: 0 4px 12px rgba(20, 184, 166, 0.1);
+            /* Bright Fresh Minimal 60-30-10 Color Scheme */
+            --primary-color: #0ea5e9;        /* 30% - Fresh sky blue (สว่าง สดใส) */
+            --accent-color: #10b981;         /* 10% - Fresh green (สดใส minimal) */
+            --neutral-color: #ffffff;        /* 60% - Pure white (สะอาด minimal) */
+            --text-color: #374151;           /* Clean dark gray */
+            --text-light: #9ca3af;           /* Light gray */
+            --border-color: #f3f4f6;         /* Very light gray border */
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
@@ -79,7 +79,7 @@
             position: absolute;
             width: 80px;
             height: 80px;
-            background: linear-gradient(45deg, rgba(20, 184, 166, 0.15), rgba(244, 114, 182, 0.15));
+            background: linear-gradient(45deg, rgba(14, 165, 233, 0.08), rgba(16, 185, 129, 0.08));
             border-radius: 50%;
             animation: float 8s ease-in-out infinite;
         }
@@ -186,12 +186,12 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(244, 114, 182, 0.08));
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.04), rgba(16, 185, 129, 0.04));
             border-radius: 1px;
         }
         .header-info {
             text-align: center;
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(244, 114, 182, 0.08));
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.04), rgba(16, 185, 129, 0.04));
             border-radius: 20px;
             padding: 2.5rem;
             margin: 2rem 0;
@@ -243,7 +243,7 @@
             }
         }
         .highlight-box {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(244, 114, 182, 0.08));
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.04), rgba(16, 185, 129, 0.04));
             border: 1px solid var(--border-color);
             border-radius: 18px;
             padding: 2rem;
@@ -296,11 +296,11 @@
         }
         
         .comparison-table tr:nth-child(even) {
-            background-color: rgba(20, 184, 166, 0.08);
+            background-color: rgba(14, 165, 233, 0.04);
         }
         
         .old-way {
-            background: rgba(20, 184, 166, 0.08);
+            background: rgba(14, 165, 233, 0.04);
             position: relative;
         }
         
@@ -313,7 +313,7 @@
         }
         
         .new-way {
-            background: rgba(244, 114, 182, 0.08);
+            background: rgba(16, 185, 129, 0.04);
             position: relative;
         }
         
@@ -446,14 +446,14 @@
             color: white;
             font-size: 1.4rem;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.2);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
             transition: var(--transition);
             z-index: 1000;
         }
         
         .fab:hover {
             transform: scale(1.05) rotate(180deg);
-            box-shadow: 0 10px 30px rgba(20, 184, 166, 0.25);
+            box-shadow: 0 6px 16px rgba(14, 165, 233, 0.12);
         }
         
         /* Responsive Design */
