@@ -31,14 +31,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Professional 60-30-10 Color Scheme */
-            --primary-color: #2563eb;        /* 30% - Main blue */
-            --accent-color: #f97316;         /* 10% - Orange accent */
-            --neutral-color: #f8fafc;        /* 60% - Light background */
-            --text-color: #1e293b;           /* Dark text */
-            --text-light: #64748b;           /* Light text */
-            --border-color: #e2e8f0;         /* Subtle borders */
-            --card-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            /* Warm & Bright 60-30-10 Color Scheme */
+            --primary-color: #14b8a6;        /* 30% - Soft teal (น่าเรียนรู้) */
+            --accent-color: #f472b6;         /* 10% - Coral pink (สดใส น่าคบหา) */
+            --neutral-color: #fef7ed;        /* 60% - Warm cream (อบอุ่น สว่าง) */
+            --text-color: #374151;           /* Warm dark gray */
+            --text-light: #6b7280;           /* Soft gray */
+            --border-color: #fde68a;         /* Warm yellow border */
+            --card-shadow: 0 4px 12px rgba(20, 184, 166, 0.1);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
@@ -79,7 +79,7 @@
             position: absolute;
             width: 80px;
             height: 80px;
-            background: linear-gradient(45deg, rgba(37, 99, 235, 0.1), rgba(249, 115, 22, 0.1));
+            background: linear-gradient(45deg, rgba(20, 184, 166, 0.15), rgba(244, 114, 182, 0.15));
             border-radius: 50%;
             animation: float 8s ease-in-out infinite;
         }
@@ -186,12 +186,12 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(249, 115, 22, 0.05));
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(244, 114, 182, 0.08));
             border-radius: 1px;
         }
         .header-info {
             text-align: center;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(249, 115, 22, 0.05));
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(244, 114, 182, 0.08));
             border-radius: 20px;
             padding: 2.5rem;
             margin: 2rem 0;
@@ -243,8 +243,8 @@
             }
         }
         .highlight-box {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(249, 115, 22, 0.05));
-            border: 1px solid rgba(74, 144, 226, 0.2);
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(244, 114, 182, 0.08));
+            border: 1px solid var(--border-color);
             border-radius: 18px;
             padding: 2rem;
             margin: 1.5rem 0;
@@ -296,11 +296,11 @@
         }
         
         .comparison-table tr:nth-child(even) {
-            background-color: rgba(37, 99, 235, 0.05);
+            background-color: rgba(20, 184, 166, 0.08);
         }
         
         .old-way {
-            background: rgba(37, 99, 235, 0.05);
+            background: rgba(20, 184, 166, 0.08);
             position: relative;
         }
         
@@ -313,7 +313,7 @@
         }
         
         .new-way {
-            background: rgba(249, 115, 22, 0.05);
+            background: rgba(244, 114, 182, 0.08);
             position: relative;
         }
         
@@ -446,14 +446,14 @@
             color: white;
             font-size: 1.4rem;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.2);
             transition: var(--transition);
             z-index: 1000;
         }
         
         .fab:hover {
             transform: scale(1.05) rotate(180deg);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 10px 30px rgba(20, 184, 166, 0.25);
         }
         
         /* Responsive Design */
