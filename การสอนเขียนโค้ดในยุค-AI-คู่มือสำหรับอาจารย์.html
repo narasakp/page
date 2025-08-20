@@ -31,17 +31,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #7b68ee;
-            --accent-color: #ff9a9e;
-            --text-color: #2c3e50;
-            --bg-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            --card-shadow: 0 8px 25px rgba(74, 144, 226, 0.08);
+            /* Professional 60-30-10 Color Scheme */
+            --primary-color: #2563eb;        /* 30% - Main blue */
+            --accent-color: #f97316;         /* 10% - Orange accent */
+            --neutral-color: #f8fafc;        /* 60% - Light background */
+            --text-color: #1e293b;           /* Dark text */
+            --text-light: #64748b;           /* Light text */
+            --border-color: #e2e8f0;         /* Subtle borders */
+            --card-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --warm-bg: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            --soft-blue: #e3f2fd;
-            --gentle-green: #e8f5e8;
-            --warm-yellow: #fff8e1;
         }
         
         * {
@@ -54,7 +52,7 @@
             font-family: 'Sarabun', 'TH SarabunPSK', Arial, sans-serif;
             line-height: 1.8;
             color: var(--text-color);
-            background: linear-gradient(135deg, #fef9e7 0%, #edf2f7 100%);
+            background: var(--neutral-color);
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -81,7 +79,7 @@
             position: absolute;
             width: 80px;
             height: 80px;
-            background: linear-gradient(45deg, rgba(168, 237, 234, 0.3), rgba(254, 214, 227, 0.3));
+            background: linear-gradient(45deg, rgba(37, 99, 235, 0.1), rgba(249, 115, 22, 0.1));
             border-radius: 50%;
             animation: float 8s ease-in-out infinite;
         }
@@ -109,7 +107,7 @@
             50% { transform: translateY(-20px) rotate(180deg); }
         }
         h1 {
-            background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 50%, #ff9a9e 100%);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -164,7 +162,7 @@
             transform: translateY(-50%);
             width: 4px;
             height: 100%;
-            background: linear-gradient(135deg, #4a90e2, #7b68ee);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-radius: 3px;
             animation: gentle-pulse 3s ease-in-out infinite;
         }
@@ -174,7 +172,7 @@
             50% { opacity: 0.8; transform: translateY(-50%) scaleY(0.95); }
         }
         h3 {
-            color: var(--secondary-color);
+            color: var(--primary-color);
             font-size: 1.4rem;
             font-weight: 500;
             margin: 2rem 0 1rem 0;
@@ -188,16 +186,16 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background: var(--accent-color);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(249, 115, 22, 0.05));
             border-radius: 1px;
         }
         .header-info {
             text-align: center;
-            background: linear-gradient(135deg, rgba(168, 237, 234, 0.2), rgba(254, 214, 227, 0.2));
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(249, 115, 22, 0.05));
             border-radius: 20px;
             padding: 2.5rem;
             margin: 2rem 0;
-            border: 1px solid rgba(74, 144, 226, 0.15);
+            border: 1px solid var(--border-color);
             position: relative;
             overflow: hidden;
         }
@@ -245,7 +243,7 @@
             }
         }
         .highlight-box {
-            background: linear-gradient(135deg, var(--soft-blue), var(--gentle-green));
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(249, 115, 22, 0.05));
             border: 1px solid rgba(74, 144, 226, 0.2);
             border-radius: 18px;
             padding: 2rem;
@@ -291,18 +289,18 @@
         }
         
         .comparison-table th {
-            background: linear-gradient(135deg, #4a90e2, #7b68ee);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             color: white;
             font-weight: 500;
             font-size: 1.1rem;
         }
         
         .comparison-table tr:nth-child(even) {
-            background-color: rgba(168, 237, 234, 0.1);
+            background-color: rgba(37, 99, 235, 0.05);
         }
         
         .old-way {
-            background: linear-gradient(135deg, rgba(255, 235, 238, 0.8), rgba(255, 205, 210, 0.6));
+            background: rgba(37, 99, 235, 0.05);
             position: relative;
         }
         
@@ -315,7 +313,7 @@
         }
         
         .new-way {
-            background: linear-gradient(135deg, rgba(232, 245, 233, 0.8), rgba(200, 230, 201, 0.6));
+            background: rgba(249, 115, 22, 0.05);
             position: relative;
         }
         
@@ -365,7 +363,7 @@
             font-weight: 500;
         }
         .workflow {
-            background: linear-gradient(135deg, var(--warm-yellow), rgba(255, 183, 77, 0.1));
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-left: 4px solid #ffb74d;
             border-radius: 0 18px 18px 0;
             padding: 2rem;
@@ -440,7 +438,7 @@
             right: 30px;
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, #4a90e2, #7b68ee);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -448,14 +446,14 @@
             color: white;
             font-size: 1.4rem;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
             transition: var(--transition);
             z-index: 1000;
         }
         
         .fab:hover {
             transform: scale(1.05) rotate(180deg);
-            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
         }
         
         /* Responsive Design */
